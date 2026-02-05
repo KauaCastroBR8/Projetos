@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  background: linear-gradient(11deg, #005070, #042d3f, #186375);
+  background-size: 800% 800%;
+  animation: mexe-mexe 30s ease infinite;
+}
+@keyframes mexe-mexe {
+  0% {
+    background-position: 0% 20%;
+  }
+  25% {
+    background-position: 80% 0%;
+  }
+  50% {
+    background-position: 100% 80%;
+  }
+  75% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 0% 20%;
+  }
+}
+
+.clock {
+  margin: 0;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+#bar {
+  animation: blink 1.2s infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: .7 }
+  to   { opacity: 1 }
+}
+
+.visual-clock{
+  width: 500px;
+  position: absolute;
+  top: 25%;
+  left: 11%;
+  padding: 0;
+  margin: 0;
+  bottom: 0%; 
+  background-color: transparent;
+}
+.face {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 0.9;
+  filter: drop-shadow(0 0 15px rgba(177, 166, 166, 0.35));
+}
+
+.hand {
+  stroke-linecap: round;
+}
+
+.hour   { stroke: #fff; stroke-width: 4; }
+.minute { stroke: #ccc; stroke-width: 3; }
+.second { stroke: #ff9966; stroke-width: 2; }
+
+.center {
+  fill: rgb(34, 30, 30);
+}

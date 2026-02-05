@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relógio Dashboard</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+<div class="clock">
+<pre><code>
+const currentTime = {
+  year: <span id="year"></span>,
+  month: <span id="month"></span>,
+  day: <span id="day"></span>,
+  dayOfWeek: "<span id="dow"></span>",
+
+  hour: <span id="t-hour"></span>,
+  minute: <span id="t-minute"></span>,
+  second: <span id="t-second"></span>,
+
+  dayProgress: "<span id="progress"></span>%",
+  dayBar: <span id="bar"></span>
+};
+</code></pre>
+</div>
+
+<div class="visual-clock">
+<svg viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="90" class="face"/>
+
+  <line id="hour"   x1="100" y1="100" x2="100" y2="60" class="hand hour"/>
+  <line id="minute" x1="100" y1="100" x2="100" y2="45" class="hand minute"/>
+  <line id="second" x1="100" y1="100" x2="100" y2="30" class="hand second"/>
+
+  <circle cx="100" cy="100" r="3" class="center"/>
+</svg>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
